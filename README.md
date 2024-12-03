@@ -117,7 +117,7 @@ NutriDetect is being developed for seamless integration with Sync AI's diabetes 
 ## 📫 Contact
 For research collaboration or healthcare integration inquiries:
 - 📧 **Thirupathi Kadari**: [Email](mailto:thirupathi.kadari986@gmail.com)
-- 📧 **Syed Raheel Hussain**: [Email](mailto:Sayedraheel1995@gmail.com)
+- 📧 **Sayed Raheel Hussain**: [Email](mailto:Sayedraheel1995@gmail.com)
 - 📧 **Tushar Sinha**: [Email](mailto:tsr@justsync.ai)
 
 ## 📃 License

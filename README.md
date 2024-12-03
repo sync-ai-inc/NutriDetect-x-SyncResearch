@@ -1,4 +1,4 @@
-# 🍔🍟 NutriDetect: AI-Powered Food Analysis for Diabetes Management 🍞🍕
+# NutriDetect: AI-Powered Food Analysis for Diabetes Management 🍞🍕
 **"Empowering diabetes patients with intelligent nutritional insights"**
 <div>
   <img src="/images_app/app2.png" alt="NutriDetect" />
@@ -95,7 +95,7 @@ Current training utilizes an enhanced version of the UECFOOD dataset, augmented 
 
 ## Application Screenshots
 <div>
-  <img src="/images_app/appscreen1.png" alt="NutriDetect-appscreen1" />
+  <img src="/images_app/appscreen11.png" alt="NutriDetect-appscreen1" />
 </div>
 <div>
   <img src="/images_app/appscreen2.png" alt="NutriDetect-appscreen2" />

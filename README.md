@@ -1,7 +1,7 @@
 # NutriDetect: AI-Powered Food Analysis for Diabetes Management 🍞🍕
 **"Empowering diabetes patients with intelligent nutritional insights"**
 <div>
-  <img src="/images_app/app2.png" alt="NutriDetect" />
+  <img src="/images_app/app1.png" alt="NutriDetect" />
 </div>
 <!-- <div>
   <img src="/images_app/app.png" alt="NutriDetect" />

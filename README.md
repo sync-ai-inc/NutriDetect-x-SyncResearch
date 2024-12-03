@@ -93,7 +93,13 @@ Current training utilizes an enhanced version of the UECFOOD dataset, augmented 
 - **Healthcare Provider Integration**: Sharing detailed dietary data with medical teams
 - **Personalized Recommendations**: AI-driven suggestions based on patient health patterns
 
-[Application Screenshots and Sample Results sections remain the same...]
+## Application Screenshots
+<div>
+  <img src="/images_app/appscreen1.png" alt="NutriDetect-appscreen1" />
+</div>
+<div>
+  <img src="/images_app/appscreen2.png" alt="NutriDetect-appscreen2" />
+</div>
 
 ## 🔗 Future Integration
 NutriDetect is being developed for seamless integration with Sync AI's diabetes management platform:

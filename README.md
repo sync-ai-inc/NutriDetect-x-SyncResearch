@@ -109,10 +109,24 @@ NutriDetect is being developed for seamless integration with Sync AI's diabetes 
 4. Extended healthcare provider features
 
 ## 🤗 Hugging Face Space
-[Hugging Face section remains the same...]
+NutriDetect is live on Hugging Face! Try out the application directly in your browser:  
 
-## 🤝 Contributing
-[Contributing section remains the same...]
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-NutriDetect-orange?style=for-the-badge&logo=huggingface)](https://huggingface.co/spaces/Thirupathi986/Nutridetect)  
+
+Visit the Hugging Face Space to:  
+- Upload your food images and get real-time predictions.  
+- View bounding boxes and detailed nutritional insights.  
+
+Click the button above or [here](https://huggingface.co/spaces/Thirupathi986/Nutridetect) to explore! 
+
+
+## 🤝 Contributing  
+We welcome contributions! Here's how you can get involved:  
+1. Fork the repository.  
+2. Create a new branch: `git checkout -b feature/your-feature`.  
+3. Commit your changes: `git commit -m 'Add some feature'`.  
+4. Push to the branch: `git push origin feature/your-feature`.  
+5. Submit a pull request. 
 
 ## 📫 Contact
 For research collaboration or healthcare integration inquiries:

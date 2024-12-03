@@ -2,7 +2,7 @@
 **"Empowering diabetes patients with intelligent nutritional insights"**
 
 <div>
-  <img src="/images_app/App.png" alt="NutriDetect" />
+  <img src="/images_app/app.png" alt="NutriDetect" />
 </div>
 
 > A Sync AI Inc. Research Initiative for Advanced Diabetes Care

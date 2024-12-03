@@ -3,9 +3,9 @@
 <div>
   <img src="/images_app/app2.png" alt="NutriDetect" />
 </div>
-<div>
+<!-- <div>
   <img src="/images_app/app.png" alt="NutriDetect" />
-</div>
+</div> -->
 
 > A Sync AI Inc. Research Initiative for Advanced Diabetes Care
 

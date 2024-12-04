@@ -10,7 +10,7 @@
 > A Sync AI Inc. Research Initiative for Advanced Diabetes Care
 
 ---
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-NutriDetect-orange?style=for-the-badge&logo=huggingface)](https://huggingface.co/spaces/Thirupathi986/Nutridetect)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-NutriDetect-orange?style=for-the-badge&logo=huggingface)](https://huggingface.co/spaces/JustSyncAI/NutriDetect)
 
 ---
 
@@ -111,13 +111,13 @@ NutriDetect is being developed for seamless integration with Sync AI's diabetes 
 ## 🤗 Hugging Face Space
 NutriDetect is live on Hugging Face! Try out the application directly in your browser:  
 
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-NutriDetect-orange?style=for-the-badge&logo=huggingface)](https://huggingface.co/spaces/Thirupathi986/Nutridetect)  
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-NutriDetect-orange?style=for-the-badge&logo=huggingface)](https://huggingface.co/spaces/JustSyncAI/NutriDetect)  
 
 Visit the Hugging Face Space to:  
 - Upload your food images and get real-time predictions.  
 - View bounding boxes and detailed nutritional insights.  
 
-Click the button above or [here](https://huggingface.co/spaces/Thirupathi986/Nutridetect) to explore! 
+Click the button above or [here](https://huggingface.co/spaces/JustSyncAI/NutriDetect) to explore! 
 
 
 ## 🤝 Contributing  

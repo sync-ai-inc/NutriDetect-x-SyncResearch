@@ -1,4 +1,4 @@
-# NutriDetect: AI-Powered Food Analysis for Diabetes Management 🍞🍕
+# Nutridetect- AI Nutrition campanion, Simplifying One Meal at a Time 🍞🍕
 **"Empowering diabetes patients with intelligent nutritional insights"**
 <div>
   <img src="/images_app/app1.png" alt="NutriDetect" />

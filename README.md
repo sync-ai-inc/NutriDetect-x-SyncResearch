@@ -64,7 +64,7 @@ NutriDetect is a pioneering research project by Sync AI Inc., designed to enhanc
 ## 🛠 Technical Architecture
 
 ### Model Details
-- **Vision Models**: YOLOv8m, YOLO11m
+- **Vision Models**: YOLOv8m, Faster-RCNN
 - **Framework**: [PyTorch](https://pytorch.org/)
 - **Dataset**: Enhanced [UECFOOD dataset](https://drive.google.com/drive/folders/14rJclN97hZqe6bmGkTjnvPaDBBIF4v5w) with diabetes-relevant annotations
 - **Deployment**: Healthcare-grade cloud infrastructure with mobile optimization
@@ -80,8 +80,8 @@ NutriDetect is a pioneering research project by Sync AI Inc., designed to enhanc
 
 | Model    | Image Size | Epochs | **mAP@0.5** | **mAP@0.5:0.95** |
 |----------|------------|--------|-------------|------------------|
-| YOLOv8m  | 640x640   | 26     | 🟢 0.652    | 🟠 0.507         |
-| YOLO11m  | 640x640   | 48     | 🟢 0.758    | 🟠 0.601         |
+| YOLOv8m  | 640x640   | 26     | 🟢 0.759    | 🟠 0.601         |
+| Faster-RCNN  | 640x640   | 48     | 🟢 0.702    | 🟠 0.652         |
 
 ## 🍽 Dataset
 Current training utilizes an enhanced version of the UECFOOD dataset, augmented with diabetes-relevant nutritional information:
@@ -131,7 +131,7 @@ We welcome contributions! Here's how you can get involved:
 ## 📫 Contact
 For research collaboration or healthcare integration inquiries:
 - 📧 **Thirupathi Kadari**: [Email](mailto:thirupathi.kadari986@gmail.com)
-- 📧 **Sayed Raheel Hussain**: [Email](mailto:Sayedraheel1995@gmail.com)
+- 📧 **Kanchan Maurya**: [Email](mailto:kanchan@justsync.ai)
 - 📧 **Tushar Sinha**: [Email](mailto:tsr@justsync.ai)
 
 ## 📃 License

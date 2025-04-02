@@ -46,13 +46,13 @@ NutriDetect is an AI-powered food recognition system developed by Sync AI Inc. I
 - Built data augmentation pipeline and evaluation metrics framework
 
 ## 🧠 Architecture & Models
-### 🔸 YOLOv8 (Ultralytics)
+### 🔸 [YOLOv8](https://github.com/ultralytics/ultralytics/blob/main/docs/en/models/yolov8.md)
 - Input: 640x640 images
 - Epochs: 50
 - Precision: 72.4%, Recall: 69.5%
 - mAP@0.5: 75.9%, mAP@0.5:0.95: 60.1%
 
-### 🔸 Faster R-CNN (Detectron2)
+### 🔸 [Faster R-CNN](https://github.com/facebookresearch/detectron2)
 - Trained on GCP using NVIDIA L4 GPU
 - Iterations: 100,000
 - Precision: 68.5%, Recall: 66.3%
@@ -61,9 +61,7 @@ NutriDetect is an AI-powered food recognition system developed by Sync AI Inc. I
 ## 🍽 Dataset Details
 We used and combined:
 - [UECFOOD256](https://www.kaggle.com/datasets/rkuo2000/uecfood256)
-- Food subsets from [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html)
-- [School Lunch Dataset](https://drive.google.com/drive/folders/14rJclN97hZqe6bmGkTjnvPaDBBIF4v5w)
-- Vietnamese food images (Pho, Banh Mi, etc.)
+- Meged Dataset from Open Image Dataset and Vietnamese Lunch Dataset [OID](https://drive.google.com/drive/folders/14rJclN97hZqe6bmGkTjnvPaDBBIF4v5w)
 
 > All datasets were resized to 640x640, augmented (flips, rotations, color jitter), and converted to YOLO format.
 

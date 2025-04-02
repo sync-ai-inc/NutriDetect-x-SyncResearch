@@ -1,13 +1,11 @@
-# Nutridetect- AI Nutrition campanion, Simplifying One Meal at a Time 🍞🍕
-**"Empowering diabetes patients with intelligent nutritional insights"**
+# NutriDetect – AI Nutrition Companion, Simplifying One Meal at a Time 🍽️
+**Empowering Health Seekers with Real-Time, AI-Driven Nutritional Analysis**
+
 <div>
   <img src="/images_app/app1.png" alt="NutriDetect" />
 </div>
-<!-- <div>
-  <img src="/images_app/app.png" alt="NutriDetect" />
-</div> -->
 
-> A Sync AI Inc. Research Initiative for Advanced Diabetes Care
+> A Sync AI Inc. Research Initiative for Advancing Digital Healthcare
 
 ---
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-NutriDetect-orange?style=for-the-badge&logo=huggingface)](https://huggingface.co/spaces/JustSyncAI/NutriDetect)
@@ -23,121 +21,111 @@
 
 ## 📚 Table of Contents
 1. [Overview](#-overview)
-2. [Healthcare Impact](#-healthcare-impact)
-3. [Key Features](#-key-features)
-4. [Research Team](#-research-team)
-5. [Technical Architecture](#-technical-architecture)
-   - [Model Details](#model-details)
-   - [Application Features](#application-features)
-6. [Performance Metrics](#-performance-metrics)
-7. [Dataset](#-dataset)
-8. [Clinical Applications](#-clinical-applications)
-9. [Application Screenshots](#-application-screenshots)
-10. [Future Integration](#-future-integration)
-11. [Hugging Face Space](#-hugging-face-space)
-12. [Contributing](#-contributing)
-13. [Contact](#-contact)
-14. [License](#-license)
+2. [Technical Contributions](#-technical-contributions)
+3. [Architecture & Models](#-architecture--models)
+4. [Dataset Details](#-dataset-details)
+5. [Training Setup](#-training-setup)
+6. [Evaluation Metrics](#-evaluation-metrics)
+7. [Results & Insights](#-results--insights)
+8. [Screenshots](#-screenshots)
+9. [Future Directions](#-future-directions)
+10. [Try on Hugging Face](#-try-on-hugging-face)
+11. [Citation](#-citation)
+12. [Contact](#-contact)
+13. [License](#-license)
 
 ## 🍴 Overview
-NutriDetect is a pioneering research project by Sync AI Inc., designed to enhance our remote health monitoring platform for diabetes patients. This advanced food recognition system will be integrated into our existing healthcare application, enabling patients to make informed dietary decisions through their smartphone cameras.
+NutriDetect is an AI-powered food recognition system developed by Sync AI Inc. It uses deep learning models like YOLOv8 and Faster R-CNN to identify food items from images and estimate nutritional content. Designed to empower users—including those managing diabetes—it helps track daily meals, calorie intake, and dietary habits in real-time.
 
-## 🏥 Healthcare Impact
-- **Target Users**: Diabetes patients using Sync AI's remote monitoring platform
-- **Clinical Value**: Real-time nutritional guidance for glucose management
-- **Healthcare Integration**: Seamless incorporation with existing patient monitoring systems
-- **Accessibility**: Mobile-first design for everyday meal decisions
-- **Patient Empowerment**: Instant feedback on food choices and their potential impact on glucose levels
+## ⚙️ Technical Contributions
+- Combined UECFOOD256, Open Images, and other datasets to form 55,000+ annotated food images across 345 categories
+- Trained two models:
+  - YOLOv8 (real-time, mobile-ready)
+  - Faster R-CNN (high-precision for clinical settings)
+- Standardized annotation to YOLO format
+- Built data augmentation pipeline and evaluation metrics framework
 
-## 🔬 Key Features
-- ✅ **Smart Food Analysis**: Advanced detection system using [YOLO](https://docs.ultralytics.com/) technology
-- ✅ **Health-Focused Insights**: Nutritional analysis tailored for diabetes management
-- ✅ **Clinical Integration**: Connects with Sync AI's healthcare monitoring platform
-- ✅ **Real-time Recommendations**: Instant guidance on food choices
-- ✅ **Future LLM Integration**: Planned multimodal capabilities for comprehensive health insights
+## 🧠 Architecture & Models
+### 🔸 YOLOv8 (Ultralytics)
+- Input: 640x640 images
+- Epochs: 50
+- Precision: 72.4%, Recall: 69.5%
+- mAP@0.5: 75.9%, mAP@0.5:0.95: 60.1%
 
-## 👥 Research Team at Sync AI Inc.
-- **Thirupathi Kadari** - Research Lead, AI Development
-- **Syed Raheel Hussain** - Research Contributor, Healthcare Integration
-- **Tushar Sinha** - Technical Advisor, Product Strategy
+### 🔸 Faster R-CNN (Detectron2)
+- Trained on GCP using NVIDIA L4 GPU
+- Iterations: 100,000
+- Precision: 68.5%, Recall: 66.3%
+- mAP@0.5: 70.2%, mAP@0.5:0.95: 65.2%
 
-## 🛠 Technical Architecture
+## 🍽 Dataset Details
+We used and combined:
+- [UECFOOD256](https://www.kaggle.com/datasets/rkuo2000/uecfood256)
+- Food subsets from [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html)
+- [School Lunch Dataset](https://drive.google.com/drive/folders/14rJclN97hZqe6bmGkTjnvPaDBBIF4v5w)
+- Vietnamese food images (Pho, Banh Mi, etc.)
 
-### Model Details
-- **Vision Models**: YOLOv8m, Faster-RCNN
-- **Framework**: [PyTorch](https://pytorch.org/)
-- **Dataset**: Enhanced [UECFOOD dataset](https://drive.google.com/drive/folders/14rJclN97hZqe6bmGkTjnvPaDBBIF4v5w) with diabetes-relevant annotations
-- **Deployment**: Healthcare-grade cloud infrastructure with mobile optimization
+> All datasets were resized to 640x640, augmented (flips, rotations, color jitter), and converted to YOLO format.
 
-### Application Features
-1. Real-time food detection and nutritional analysis
-2. Glucose impact prediction capabilities
-3. Integration with patient health records
-4. HIPAA-compliant data handling
-5. Future multimodal LLM integration
+## ⚙️ Training Setup
+| Model        | Framework     | Batch Size | Duration   |
+|--------------|---------------|------------|------------|
+| YOLOv8       | Ultralytics   | 16         | 46 hours   |
+| Faster R-CNN | Detectron2    | 8          | 37 hours   |
 
-## 📊 Performance Metrics
+## 📊 Evaluation Metrics
+- **Precision**: Correct positive predictions / Total positive predictions
+- **Recall**: Correct positive predictions / All actual positives
+- **mAP@0.5**: Average Precision @ IoU 0.5
+- **mAP@0.5–0.95**: Mean AP over 10 IoU thresholds
 
-| Model    | Image Size | Epochs | **mAP@0.5** | **mAP@0.5:0.95** |
-|----------|------------|--------|-------------|------------------|
-| YOLOv8m  | 640x640   | 26     | 🟢 0.759    | 🟠 0.601         |
-| Faster-RCNN  | 640x640   | 48     | 🟢 0.702    | 🟠 0.652         |
+## 📈 Results & Insights
+| Model        | Precision | Recall | mAP@0.5 | mAP@0.5–0.95 |
+|--------------|-----------|--------|---------|--------------|
+| YOLOv8       | 72.4%     | 69.5%  | 75.9%   | 60.1%        |
+| Faster R-CNN | 68.5%     | 66.3%  | 70.2%   | 65.2%        |
 
-## 🍽 Dataset
-Current training utilizes an enhanced version of the UECFOOD dataset, augmented with diabetes-relevant nutritional information:
-- [Base Dataset](https://drive.google.com/drive/folders/14rJclN97hZqe6bmGkTjnvPaDBBIF4v5w)
+- YOLOv8: Better for mobile and fast inference
+- Faster R-CNN: Better for small objects, occlusion, clinical use
 
-## 🩺 Clinical Applications
-- **Glucose Management**: Real-time nutritional insights for better glucose control
-- **Dietary Tracking**: Automated food logging and nutritional analysis
-- **Healthcare Provider Integration**: Sharing detailed dietary data with medical teams
-- **Personalized Recommendations**: AI-driven suggestions based on patient health patterns
-
-## Application Screenshots
+## 🖼️ Screenshots
 <div>
-  <img src="/images_app/appscreen11.png" alt="NutriDetect-appscreen1" />
+  <img src="/images_app/appscreen11.png" alt="NutriDetect Screenshot 1" />
 </div>
 <div>
-  <img src="/images_app/appscreen2.png" alt="NutriDetect-appscreen2" />
+  <img src="/images_app/appscreen2.png" alt="NutriDetect Screenshot 2" />
 </div>
 
-## 🔗 Future Integration
-NutriDetect is being developed for seamless integration with Sync AI's diabetes management platform:
-1. Integration with patient glucose monitoring systems
-2. Multimodal LLM capabilities for comprehensive health insights
-3. Advanced pattern recognition for personalized recommendations
-4. Extended healthcare provider features
+## 🚀 Future Directions
+- Augmented reality integration for real-time food feedback
+- Wearable device data fusion (e.g., glucose monitors)
+- Multimodal models for full meal context understanding
 
-## 🤗 Hugging Face Space
-NutriDetect is live on Hugging Face! Try out the application directly in your browser:  
+## 🤗 Try on Hugging Face
+Visit [Hugging Face NutriDetect Space](https://huggingface.co/spaces/JustSyncAI/NutriDetect) to:
+- Upload food photos
+- View detected items & nutritional insights
 
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-NutriDetect-orange?style=for-the-badge&logo=huggingface)](https://huggingface.co/spaces/JustSyncAI/NutriDetect)  
-
-Visit the Hugging Face Space to:  
-- Upload your food images and get real-time predictions.  
-- View bounding boxes and detailed nutritional insights.  
-
-Click the button above or [here](https://huggingface.co/spaces/JustSyncAI/NutriDetect) to explore! 
-
-
-## 🤝 Contributing  
-We welcome contributions! Here's how you can get involved:  
-1. Fork the repository.  
-2. Create a new branch: `git checkout -b feature/your-feature`.  
-3. Commit your changes: `git commit -m 'Add some feature'`.  
-4. Push to the branch: `git push origin feature/your-feature`.  
-5. Submit a pull request. 
+## 📖 Citation
+```
+@article{NutriDetect2025,
+  title={NutriDetect – AI-powered food recognition and nutritional tracking system},
+  author={Thirupathi Kadari, Kanchan Maurya, Tushar Sinha},
+  journal={Sync AI Inc. Research},
+  year={2025},
+  url={https://github.com/sync-ai-inc/NutriDetect-x-SyncResearch}
+}
+```
 
 ## 📫 Contact
-For research collaboration or healthcare integration inquiries:
-- 📧 **Thirupathi Kadari**: [Email](mailto:thirupathi.kadari986@gmail.com)
-- 📧 **Kanchan Maurya**: [Email](mailto:kanchan@justsync.ai)
-- 📧 **Tushar Sinha**: [Email](mailto:tsr@justsync.ai)
+- 📧 **Thirupathi Kadari**: [thirupathi.kadari986@gmail.com](mailto:thirupathi.kadari986@gmail.com)
+- 📧 **Kanchan Maurya**: [kanchan@justsync.ai](mailto:kanchan@justsync.ai)
+- 📧 **Tushar Sinha**: [tsr@justsync.ai](mailto:tsr@justsync.ai)
 
 ## 📃 License
-Copyright © 2024 Sync AI Inc. All rights reserved.
+MIT License — see the [LICENSE](./LICENSE) file for details.
 
 ---
 <p align="center">
-Developed by Sync AI Inc. for advancing diabetes care through intelligent nutrition monitoring
+Developed by Sync AI Inc. — Bridging AI, Nutrition, and Healthcare.
 </p>
